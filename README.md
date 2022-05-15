@@ -1,15 +1,15 @@
-# DRL-freshMCS
-Additional materials for paper "[Mobile Crowdsensing for Data Freshness:
-A Deep Reinforcement Learning Approach](https://ieeexplore.ieee.org/document/9488791)" accepted by INFOCOM 2021.
+# DRL-eFresh
+Additional materials for paper "[Delay-Sensitive Energy-Efficient UAV
+Crowdsensing by Deep Reinforcement Learning](https://ieeexplore.ieee.org/abstract/document/9540290/)" accepted in TMC.
 
 ## :page_facing_up: Description
-Data collection by mobile crowdsensing (MCS) is emerging as data sources for smart city applications, however how to ensure data freshness has sparse research exposure but quite important in practice. In this paper, we consider to use a group of mobile agents (MAs) like UAVs and driverless cars which are equipped with multiple antennas to move around in the task area to collect data from deployed sensor nodes (SNs). Our goal is to minimize the age of information (AoI) of all SNs and energy consumption of MAs during movement and data upload. To this end, we propose a centralized deep reinforcement learning (DRL)-based solution called “DRL-freshMCS” for controlling MA trajectory planning and SN scheduling. We further utilize implicit quantile networks to maintain the accurate value estimation and steady policies for MAs. Then, we design an exploration and exploitation mechanism by dynamic distributed prioritized experience replay. We also derive the theoretical lower bound for episodic AoI. Extensive simulation results show that DRLfreshMCS significantly reduces the episodic AoI per remaining energy, compared to five baselines when varying different number of antennas and data upload thresholds, and number of SNs. We also visualize their trajectories and AoI update process for clear illustrations.
+Mobile crowdsensing (MCS) by unmanned aerial vehicles (UAVs) servicing delay-sensitive applications becomes popular by navigating a group of UAVs to take advantage of their equipped high-precision sensors and durability for data collection in harsh environments. In this paper, we aim to simultaneously maximize collected data amount, geographical fairness, and minimize the energy consumption of all UAVs, as well as to guarantee the data freshness by setting a deadline in each timeslot. Specifically, we propose a centralized control, distributed execution framework by decentralized deep reinforcement learning (DRL) for delay-sensitive and energy-efficient UAV crowdsensing, called "DRL-eFresh". It includes a synchronous computational architecture with GRU sequential modeling to generate multi-UAV navigation decisions. Also, we derive an optimal time allocation solution for data collection while considering all UAV efforts and avoiding much data dropout due to limited data upload time and wireless data rate.
 
 ## :wrench: Installation
 1. Clone repo
     ```bash
-    git clone https://github.com/BIT-MCS/DRL-freshMCS.git
-    cd DRL-freshMCS
+    git clone https://github.com/BIT-MCS/DRL-eFresh.git
+    cd DRL-eFresh
     ```
 2. Install dependent packages
     ```sh
@@ -24,7 +24,8 @@ Data collection by mobile crowdsensing (MCS) is emerging as data sources for sma
 
 Train our solution
 ```bash
-python train.py --config realAoI_iqn_lstm.json --log-dir ./rltime_logs
+# set "trainable=True" in main_setting.py
+python main.py
 ```
 
 
@@ -33,17 +34,18 @@ python train.py --config realAoI_iqn_lstm.json --log-dir ./rltime_logs
 Test with the trained models 
 
 ```sh
-python eval.py --path ./rltime_logs/your_model_path
+# set "trainable=False" and "test_path" in main_setting.py
+python main.py
 ```
 
 Random test the env
 
 ```sh
-python try_real_aoi.py
+python test_random_agent.py
 ```
 
 ## :clap: Reference
-- https://github.com/opherlieber/rltime
+- https://github.com/ikostrikov/pytorch-a2c-ppo-acktr-gail
 
 
 ## :scroll: Acknowledgement
