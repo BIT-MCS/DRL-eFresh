@@ -1,0 +1,17 @@
+bokeh==2.4.0
+holoviews>=1.14.2
+hvplot
+gym
+matplotlib
+numpy
+scipy
+seaborn
+tqdm
+folium
+colorcet
+panel
+pyviz-comms
+selenium
+pandas
+geopandas
+tensorboard
