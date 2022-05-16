@@ -1,5 +1,5 @@
 # DRL-eFresh
-Additional materials for paper "[Delay-Sensitive Energy-Efficient UAV
+This is the code accompanying the paper: "[Delay-Sensitive Energy-Efficient UAV
 Crowdsensing by Deep Reinforcement Learning](https://ieeexplore.ieee.org/abstract/document/9540290/)" accepted in TMC.
 
 ## :page_facing_up: Description
@@ -58,3 +58,16 @@ Corresponding author: Chi Harold Liu.
 ## :e-mail: Contact
 
 If you have any question, please email `3120215520@bit.edu.cn`.
+
+## Paper
+If you are interested in our work, please cite our paper as
+
+```
+@ARTICLE{dai2021delay,
+    author={Dai, Zipeng and Liu, Chi Harold and Han, Rui and Wang, Guoren and Leung, Kin and Tang, Jian},  
+    journal={IEEE Transactions on Mobile Computing (TMC)},   
+    title={Delay-Sensitive Energy-Efficient UAV Crowdsensing by Deep Reinforcement Learning},   
+    year={2021},  
+    pages={1-1},  
+    }
+```
