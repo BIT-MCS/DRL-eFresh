@@ -1,6 +1,6 @@
 # DRL-eFresh
 This is the code accompanying the paper: "[Delay-Sensitive Energy-Efficient UAV
-Crowdsensing by Deep Reinforcement Learning](https://ieeexplore.ieee.org/abstract/document/9540290/)" accepted in TMC.
+Crowdsensing by Deep Reinforcement Learning](https://ieeexplore.ieee.org/abstract/document/9540290/)", published in TMC.
 
 ## :page_facing_up: Description
 Mobile crowdsensing (MCS) by unmanned aerial vehicles (UAVs) servicing delay-sensitive applications becomes popular by navigating a group of UAVs to take advantage of their equipped high-precision sensors and durability for data collection in harsh environments. In this paper, we aim to simultaneously maximize collected data amount, geographical fairness, and minimize the energy consumption of all UAVs, as well as to guarantee the data freshness by setting a deadline in each timeslot. Specifically, we propose a centralized control, distributed execution framework by decentralized deep reinforcement learning (DRL) for delay-sensitive and energy-efficient UAV crowdsensing, called "DRL-eFresh". It includes a synchronous computational architecture with GRU sequential modeling to generate multi-UAV navigation decisions. Also, we derive an optimal time allocation solution for data collection while considering all UAV efforts and avoiding much data dropout due to limited data upload time and wireless data rate.
