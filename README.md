@@ -69,5 +69,5 @@ If you are interested in our work, please cite our paper as
     title={Delay-Sensitive Energy-Efficient UAV Crowdsensing by Deep Reinforcement Learning},   
     year={2021},  
     pages={1-1},  
-    }
+}
 ```
